@@ -23,6 +23,7 @@ import java.time.LocalDate
 import java.util.*
 import kotlin.collections.ArrayList
 
+
 @RequiresApi(Build.VERSION_CODES.O)
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -65,24 +66,88 @@ fun AddPassengerPage(
                 .fillMaxHeight(),
             verticalArrangement = Arrangement.Center // Center vertically
         ) {
-            // Name
-            OutlinedTextField(
-                value = passengerName,
-                onValueChange = { passengerName = it },
-                label = { Text("نام") },
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .padding(8.dp)
-                    .padding(vertical = 8.dp),
-                keyboardOptions = KeyboardOptions.Default.copy(
-                    imeAction = ImeAction.Next
-                ),
-                singleLine = true,
-                colors = ExposedDropdownMenuDefaults.outlinedTextFieldColors(
-                    textColor = Color.White,
-                ),
-            )
-
+            Row(
+                modifier = Modifier.fillMaxWidth(),
+                horizontalArrangement = Arrangement.SpaceBetween
+            ){
+                // Name
+                OutlinedTextField(
+                    value = passengerName,
+                    onValueChange = { passengerName = it },
+                    label = { Text("نام") },
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .weight(1f)
+                        .padding(8.dp),
+//                        .padding(vertical = 8.dp),
+                    keyboardOptions = KeyboardOptions.Default.copy(
+                        imeAction = ImeAction.Next
+                    ),
+                    singleLine = true,
+                    colors = ExposedDropdownMenuDefaults.outlinedTextFieldColors(
+                        textColor = Color.White,
+                    ),
+                )
+                // Name
+                OutlinedTextField(
+                    value = passengerName,
+                    onValueChange = { passengerName = it },
+                    label = { Text("نام خانوادگی") },
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .weight(1f)
+                        .padding(8.dp),
+//                        .padding(vertical = 8.dp),
+                    keyboardOptions = KeyboardOptions.Default.copy(
+                        imeAction = ImeAction.Next
+                    ),
+                    singleLine = true,
+                    colors = ExposedDropdownMenuDefaults.outlinedTextFieldColors(
+                        textColor = Color.White,
+                    ),
+                )
+            }
+            Row(
+                modifier = Modifier.fillMaxWidth(),
+                horizontalArrangement = Arrangement.SpaceBetween
+            ){
+                // Name
+                OutlinedTextField(
+                    value = passengerName,
+                    onValueChange = { passengerName = it },
+                    label = { Text("نام به انگلیسی") },
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .weight(1f)
+                        .padding(8.dp),
+//                        .padding(vertical = 8.dp),
+                    keyboardOptions = KeyboardOptions.Default.copy(
+                        imeAction = ImeAction.Next
+                    ),
+                    singleLine = true,
+                    colors = ExposedDropdownMenuDefaults.outlinedTextFieldColors(
+                        textColor = Color.White,
+                    ),
+                )
+                // Name
+                OutlinedTextField(
+                    value = passengerName,
+                    onValueChange = { passengerName = it },
+                    label = { Text("نام خانوادگی به انگلیسی") },
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .weight(1f)
+                        .padding(8.dp),
+//                        .padding(vertical = 8.dp),
+                    keyboardOptions = KeyboardOptions.Default.copy(
+                        imeAction = ImeAction.Next
+                    ),
+                    singleLine = true,
+                    colors = ExposedDropdownMenuDefaults.outlinedTextFieldColors(
+                        textColor = Color.White,
+                    ),
+                )
+            }
             // ID
             OutlinedTextField(
                 value = passengerId,
